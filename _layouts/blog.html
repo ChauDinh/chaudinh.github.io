@@ -17,20 +17,34 @@ layout: default
     border: none;
 		border-bottom: 1px solid gray;
 	}
+  .tag-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .tag-item {
+    color: red;
+    border-radius: 2px;
+    border: 1px solid gray;
+    margin-right: 5px;
+    padding: 0 4px;
+  }
 	#results-container {
 		margin: 1rem 0;
     background-color: #f9f9f9;
 	}
 </style>
 <section class="posts">
-  <h1 style="color: #cc0000">Example Blog</h1>
+  <h1 style="color: #cc0000">Search</h1>
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search for a tag or post...">
     <ol id="results-container"></ol>
   </div>
-  <h2 style="color: #cc0000">Feed</h2>
-  <a href="{{ site.baseurl }}/atom.xml" class="rss">RSS <span class="fa fa-rss" style="color: #ee802f"></span></a>
-  <a href="{{ site.baseurl }}/feed.json" class="rss">JSON <span class="fa fa-rss" style="color: #ee802f"></span></a>
+  <h2 style="color: #cc0000">Posts</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li><a style="color: black;" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d-%Y" }}</time></li>
+    {% endfor %}
+  </ul>
   <h2 style="color: #cc0000">Tags</h2>
   {% assign tags = site.tags | sort %}
   <p>
@@ -38,12 +52,9 @@ layout: default
       <a href="/tag/{{ tag | first | replace: ' ', '%20'}}">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }}){% unless forloop.last %}, {% endunless %}</a>
     {% endfor %}
   </p>
-  <h2 style="color: #cc0000">Posts</h2>
-  <ul>
-    {% for post in site.posts %}
-      <li><a style="color: black;" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d-%Y" }}</time></li>
-    {% endfor %}
-  </ul>
+  <h2 style="color: #cc0000">Feed</h2>
+  <a href="{{ site.baseurl }}/atom.xml" class="rss">RSS <span class="fa fa-rss" style="color: #ee802f"></span></a>
+  <a href="{{ site.baseurl }}/feed.json" class="rss">JSON <span class="fa fa-rss" style="color: #ee802f"></span></a>
 </section>
 <script src="/search.js" type="text/javascript"></script>
 <script type="text/javascript">
