@@ -1,6 +1,7 @@
 $backgroundColor: #ffffff;
 $bodyColor: #000000;
-$bodyFont: Verdana, "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$bodyFont: Verdana, 'Segoe UI', Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
 html {
   position: relative;
@@ -49,10 +50,10 @@ section {
   h5 {
     font-size: 100%;
   }
-
 }
 
-header, section {
+header,
+section {
   padding: 1rem;
 }
 
@@ -75,10 +76,10 @@ header {
 
 header {
   li {
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
     text-align: right;
     margin-right: 2rem;
-  }  
+  }
 
   a:hover {
     color: $bodyColor;
@@ -96,13 +97,13 @@ nav {
   ul {
     list-style: none;
   }
-  
+
   li {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-    
+
     a {
       white-space: nowrap;
       overflow: hidden;
@@ -115,12 +116,10 @@ nav {
       white-space: nowrap;
       font-variant-numeric: tabular-nums;
     }
-
   }
 }
 
 .posts {
-
   h1 {
     margin: 1rem 0;
     font-size: 150%;
@@ -145,10 +144,13 @@ nav {
     margin: 1rem 0;
     font-size: 100%;
   }
-
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   line-height: 1;
   margin: 1rem 0;
 }
@@ -182,7 +184,7 @@ pre {
 }
 
 blockquote {
-  border-left: .25em solid #dfe2e5;
+  border-left: 0.25em solid #dfe2e5;
   color: #6a737d;
   padding: 0 1em;
 }
@@ -197,26 +199,42 @@ blockquote {
   color: #333;
 }
 
-table tr th {background:#eeeee1; color:#333; padding:0; border:#aaa solid 1px;  text-align: center; font-weight: bold;}  
-table tr td {border:1px #ccc solid; padding:5px;}  
-table tr td.rightright {background: #eeeee1;}  
-table tr td h4 {margin:0; padding:0; font-weight:normal;}  
+table tr th {
+  background: #eeeee1;
+  color: #333;
+  padding: 0;
+  border: #aaa solid 1px;
+  text-align: center;
+  font-weight: bold;
+}
+table tr td {
+  border: 1px #ccc solid;
+  padding: 5px;
+}
+table tr td.rightright {
+  background: #eeeee1;
+}
+table tr td h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
 
-@media screen and (max-width: 45rem ) {
-	header li {
+@media screen and (max-width: 45rem) {
+  header li {
     display: inline;
-		margin-right: 1rem;
+    margin-right: 1rem;
     font-size: 110%;
-	}
+  }
 
-	header ul {
-		border-bottom: 1px solid #eee;
-		padding-bottom: 2rem;	
-	}
+  header ul {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+  }
 
-	nav ul {
+  nav ul {
     border-right: 0px;
-	}
+  }
 
   footer {
     margin-bottom: 1rem;
