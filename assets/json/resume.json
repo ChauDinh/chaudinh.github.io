@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Chris Dinh",
+    "label": "Software engineer",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "chaudvb95uc@gmail.com",
+    "phone": "(+84) 932-872-764",
+    "url": "https://chaudinh.github.io",
+    "summary": "A Vietnamese software engineer, who works on React programming environment, and has a passion for Test-Driven development, refactoring and clean code.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
